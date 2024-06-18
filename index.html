@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 class="title" align="center">Note Book</h1>
+      <div align="center">
+        <label for="searchNotes">Search Notes: </label>
+        <input type="text" id="filter" placeholder="Search Notes..">
+      </div>
+      <form onsubmit="handleFormSubmit(event)">
+      <div align="center">
+        <label for="totalnotes">Total Notes:</label>
+        <input type="number" name="totalnotes" value="0" id="totalnotes"><br>
+        <label for="showing">Showing:</label>
+        <input type="number" name="showing" value="0" id="showing">
+      </div>
+      <div>
+        <form onsubmit="handleFormSubmit(event)">
+        <label for="notetext">Note Title:</label>
+        <input type="text" id="notetext" name="notetext"><br><br>
+        <label for="notedesc">Note Description:</label><br>
+        <textarea name="notedesc" id="notedesc" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit">Add To Book</button>
+    </form>
+    <ul class="listofnotes" id="detailList"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
